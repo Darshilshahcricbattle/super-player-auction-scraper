@@ -47,11 +47,9 @@ jobs:
           
       - name: Create credentials file
         run: |
-          echo '{
-            "client_id": "'${{ secrets.AZURE_CLIENT_ID }}'",
-            "tenant_id": "'${{ secrets.AZURE_TENANT_ID }}'",
-            "client_secret": "'${{ secrets.AZURE_CLIENT_SECRET }}'"
-          }' > id.txt
+          echo "Application (client) ID: ${{ secrets.AZURE_CLIENT_ID }}" > id.txt
+          echo "Directory (tenant) ID: ${{ secrets.AZURE_TENANT_ID }}" >> id.txt
+          echo "Value: ${{ secrets.AZURE_CLIENT_SECRET }}" >> id.txt
           
       - name: Run scraper
         env:
