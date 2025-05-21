@@ -14,9 +14,11 @@ import os
 class SeleniumScraper:
     def __init__(self):
         self.driver = None
-        self.logger = logging.getLogger(__name__)    
-        def initialize_driver(self):
-            """Initialize the Chrome webdriver with appropriate options"""
+        self.logger = logging.getLogger(__name__)
+        self.headless = True  # Add this line
+        
+    def initialize_driver(self):
+        """Initialize the Chrome webdriver with appropriate options"""
         options = Options()
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
@@ -37,16 +39,6 @@ class SeleniumScraper:
             
         self.driver.maximize_window()
         self.logger.info("Chrome driver initialized successfully")
-
-    def initialize_driver(self):
-        """Initialize the Chrome WebDriver with appropriate options"""
-        chrome_options = webdriver.ChromeOptions()
-        if self.headless:
-            chrome_options.add_argument('--headless')
-            chrome_options.add_argument('--no-sandbox')
-            chrome_options.add_argument('--disable-dev-shm-usage')
-        
-        self.driver = webdriver.Chrome(options=chrome_options)
         return self.driver
 
     def scrape_tournament_data(self):
