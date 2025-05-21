@@ -1,6 +1,6 @@
 {
   "scraping_settings": {
-    "url": "https://www.superplayerauction.com/tournaments/upcoming",
+    "url": "https://www.superplayerauction.com/upcoming",
     "tournament_data": {
       "name": true,
       "date": true,
