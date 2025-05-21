@@ -55,7 +55,9 @@ jobs:
           GITHUB_ACTIONS: 'true'
         run: |
           python src/main.py
-          
+
+      - name: Pull latest changes
+        run: git pull origin main
       # Commit data back to the repository
       - name: Commit data back to repository
         if: success()
