@@ -1,0 +1,54 @@
+2025-05-20 14:49:05,122 - root - INFO - Logger initialized successfully
+2025-05-20 14:49:05,122 - root - INFO - Log file: C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\logs\scraper_20250520_144905.log
+2025-05-20 14:49:05,123 - root - INFO - Starting Super Player Auction scraper
+2025-05-20 14:49:05,123 - utils.config - INFO - Using credentials from alternate path: c:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\Scapper_superplayer\id.txt
+2025-05-20 14:49:05,123 - utils.config - INFO - Credentials loaded successfully
+2025-05-20 14:49:05,123 - utils.config - INFO - Settings loaded successfully
+2025-05-20 14:49:05,123 - root - INFO - Initializing Selenium scraper
+2025-05-20 14:49:05,126 - WDM - INFO - ====== WebDriver manager ======
+2025-05-20 14:49:06,338 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 14:49:06,577 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 14:49:06,797 - WDM - INFO - Driver [C:\Users\darsh\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-20 14:49:08,178 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-05-20 14:49:08,180 - root - INFO - Scraping tournament data
+2025-05-20 14:49:08,180 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-05-20 14:49:12,427 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-05-20 14:49:17,430 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-05-20 14:49:30,066 - scraper.selenium_scraper - INFO - Saved page screenshot to C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\logs\screenshots\page_loaded_20250520144929.png
+2025-05-20 14:49:30,066 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-05-20 14:49:30,109 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-05-20 14:49:30,872 - scraper.selenium_scraper - INFO - Scraped tournament 1: Hariprabodham Premier League
+2025-05-20 14:49:31,563 - scraper.selenium_scraper - INFO - Scraped tournament 2: MARC Malappuram Premier league S2
+2025-05-20 14:49:32,221 - scraper.selenium_scraper - INFO - Scraped tournament 3: ArjunDMUP
+2025-05-20 14:49:32,900 - scraper.selenium_scraper - INFO - Scraped tournament 4: PALAKKAD CRICKET LEAGUE
+2025-05-20 14:49:33,592 - scraper.selenium_scraper - INFO - Scraped tournament 5: Elite Cricket Championship
+2025-05-20 14:49:34,256 - scraper.selenium_scraper - INFO - Scraped tournament 6: Hariprabodham Parivar Cricket League
+2025-05-20 14:49:34,920 - scraper.selenium_scraper - INFO - Scraped tournament 7: RJ54 CRICKET LEAGUE SEASON 2
+2025-05-20 14:49:35,579 - scraper.selenium_scraper - INFO - Scraped tournament 8: PKPPL Season 06
+2025-05-20 14:49:36,268 - scraper.selenium_scraper - INFO - Scraped tournament 9: Naresh Cup
+2025-05-20 14:49:36,953 - scraper.selenium_scraper - INFO - Scraped tournament 10: TAGARAPUVALASA PREMIER LEAGUE
+2025-05-20 14:49:37,644 - scraper.selenium_scraper - INFO - Scraped tournament 11: Bhatgram Premier League
+2025-05-20 14:49:38,318 - scraper.selenium_scraper - INFO - Scraped tournament 12: TITAN LEAGUE GRAND SEASON 3
+2025-05-20 14:49:38,983 - scraper.selenium_scraper - INFO - Scraped tournament 13: SUPER LEAGUE
+2025-05-20 14:49:39,659 - scraper.selenium_scraper - INFO - Scraped tournament 14: TITAN LEAGUE GRAND SEASON 3
+2025-05-20 14:49:40,350 - scraper.selenium_scraper - INFO - Scraped tournament 15: Indian Premier League Auction 2025
+2025-05-20 14:49:41,021 - scraper.selenium_scraper - INFO - Scraped tournament 16: Kakina Super League-2025
+2025-05-20 14:49:41,676 - scraper.selenium_scraper - INFO - Scraped tournament 17: Amar Ujala Premier League
+2025-05-20 14:49:42,357 - scraper.selenium_scraper - INFO - Scraped tournament 18: Hpl
+2025-05-20 14:49:43,037 - scraper.selenium_scraper - INFO - Scraped tournament 19: FABLEAGUE PREMIER
+2025-05-20 14:49:43,692 - scraper.selenium_scraper - INFO - Scraped tournament 20: dt test
+2025-05-20 14:49:43,692 - root - INFO - Successfully scraped 20 tournaments
+2025-05-20 14:49:43,710 - root - INFO - Saved scraped data to C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\data\tournament_data_20250520-144943.json
+2025-05-20 14:49:43,710 - root - INFO - Initializing Graph API
+2025-05-20 14:49:43,711 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-05-20 14:49:43,711 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-05-20 14:49:43,711 - root - INFO - Authenticating with Microsoft Graph API
+2025-05-20 14:49:50,725 - excel.graph_api - INFO - Authentication successful
+2025-05-20 14:49:50,725 - root - INFO - Updating Excel sheet with scraped data
+2025-05-20 14:49:51,256 - excel.graph_api - INFO - Retrieved drive ID: b!MXUqfmBgAkyqAi_g7J1PO_6yKSWnHbZCs3mpe4EkYuX6d8izcdJxRb78S6OW5SIB
+2025-05-20 14:49:53,915 - excel.graph_api - INFO - Retrieved 183 rows from Excel
+2025-05-20 14:49:54,788 - excel.graph_api - INFO - No new tournaments to add
+2025-05-20 14:49:54,804 - root - INFO - Excel sheet updated successfully
+2025-05-20 14:49:56,930 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-05-20 14:49:56,931 - root - INFO - Selenium driver closed
+2025-05-20 14:49:56,931 - root - INFO - Script execution completed

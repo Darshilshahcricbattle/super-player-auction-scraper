@@ -1,0 +1,6 @@
+2025-05-20 14:22:52,519 - root - INFO - Logger initialized successfully
+2025-05-20 14:22:52,520 - root - INFO - Log file: C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\logs\scraper_20250520_142252.log
+2025-05-20 14:22:52,521 - root - INFO - Starting Super Player Auction scraper
+2025-05-20 14:22:52,521 - utils.config - ERROR - Credentials file not found: C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\id.txt
+2025-05-20 14:22:52,521 - utils.config - INFO - Settings loaded successfully
+2025-05-20 14:22:52,521 - root - ERROR - Failed to load credentials. Please check id.txt file.

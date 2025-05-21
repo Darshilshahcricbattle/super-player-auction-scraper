@@ -1,0 +1,60 @@
+2025-05-21 09:13:08,457 - root - INFO - Logger initialized successfully
+2025-05-21 09:13:08,457 - root - INFO - Log file: C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\logs\scraper_20250521_091308.log
+2025-05-21 09:13:08,457 - root - INFO - Starting Super Player Auction scraper
+2025-05-21 09:13:08,457 - utils.config - INFO - Using credentials from alternate path: c:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\Scapper_superplayer\id.txt
+2025-05-21 09:13:08,473 - utils.config - INFO - Credentials loaded successfully
+2025-05-21 09:13:08,473 - utils.config - INFO - Settings loaded successfully
+2025-05-21 09:13:08,473 - root - INFO - Initializing Selenium scraper
+2025-05-21 09:13:08,473 - WDM - INFO - ====== WebDriver manager ======
+2025-05-21 09:13:09,633 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 09:13:09,828 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 09:13:09,944 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 09:13:10,147 - WDM - INFO - WebDriver version 136.0.7103.94 selected
+2025-05-21 09:13:10,147 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-21 09:13:10,147 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-21 09:13:10,269 - WDM - INFO - Driver downloading response is 200
+2025-05-21 09:13:11,134 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-21 09:13:11,394 - WDM - INFO - Driver has been saved in cache [C:\Users\darsh\.wdm\drivers\chromedriver\win64\136.0.7103.94]
+2025-05-21 09:13:12,922 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-05-21 09:13:12,922 - root - INFO - Scraping tournament data
+2025-05-21 09:13:12,924 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-05-21 09:13:15,381 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-05-21 09:13:20,396 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-05-21 09:13:33,077 - scraper.selenium_scraper - INFO - Saved page screenshot to C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\logs\screenshots\page_loaded_20250521091332.png
+2025-05-21 09:13:33,077 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-05-21 09:13:33,109 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-05-21 09:13:33,987 - scraper.selenium_scraper - INFO - Scraped tournament 1: Hariprabodham Premier League
+2025-05-21 09:13:34,721 - scraper.selenium_scraper - INFO - Scraped tournament 2: MARC Malappuram Premier league S2
+2025-05-21 09:13:35,441 - scraper.selenium_scraper - INFO - Scraped tournament 3: ArjunDMUP
+2025-05-21 09:13:36,211 - scraper.selenium_scraper - INFO - Scraped tournament 4: PALAKKAD CRICKET LEAGUE
+2025-05-21 09:13:37,694 - scraper.selenium_scraper - INFO - Scraped tournament 6: Hariprabodham Parivar Cricket League
+2025-05-21 09:13:38,433 - scraper.selenium_scraper - INFO - Scraped tournament 7: RJ54 CRICKET LEAGUE SEASON 2
+2025-05-21 09:13:39,164 - scraper.selenium_scraper - INFO - Scraped tournament 8: PKPPL Season 06
+2025-05-21 09:13:39,907 - scraper.selenium_scraper - INFO - Scraped tournament 9: MPL Mega Auction
+2025-05-21 09:13:40,615 - scraper.selenium_scraper - INFO - Scraped tournament 10: Bhatgram Premier League
+2025-05-21 09:13:41,565 - scraper.selenium_scraper - INFO - Scraped tournament 11: TITAN LEAGUE GRAND SEASON 3
+2025-05-21 09:13:42,293 - scraper.selenium_scraper - INFO - Scraped tournament 12: SUPER LEAGUE
+2025-05-21 09:13:43,015 - scraper.selenium_scraper - INFO - Scraped tournament 13: Indian Premier League Auction 2025
+2025-05-21 09:13:43,743 - scraper.selenium_scraper - INFO - Scraped tournament 14: TITAN LEAGUE GRAND SEASON 3
+2025-05-21 09:13:44,478 - scraper.selenium_scraper - INFO - Scraped tournament 15: Amar Ujala Premier League
+2025-05-21 09:13:45,201 - scraper.selenium_scraper - INFO - Scraped tournament 16: Kakina Super League-2025
+2025-05-21 09:13:45,919 - scraper.selenium_scraper - INFO - Scraped tournament 17: Hpl
+2025-05-21 09:13:46,652 - scraper.selenium_scraper - INFO - Scraped tournament 18: FABLEAGUE PREMIER
+2025-05-21 09:13:47,368 - scraper.selenium_scraper - INFO - Scraped tournament 19: dt test
+2025-05-21 09:13:48,121 - scraper.selenium_scraper - INFO - Scraped tournament 20: Parisara Premi Premiere League
+2025-05-21 09:13:48,121 - root - INFO - Successfully scraped 20 tournaments
+2025-05-21 09:13:48,126 - root - INFO - Saved scraped data to C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\data\tournament_data_20250521-091348.json
+2025-05-21 09:13:48,126 - root - INFO - Initializing Graph API
+2025-05-21 09:13:48,126 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-05-21 09:13:48,126 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-05-21 09:13:48,126 - root - INFO - Authenticating with Microsoft Graph API
+2025-05-21 09:13:49,780 - excel.graph_api - INFO - Authentication successful
+2025-05-21 09:13:49,780 - root - INFO - Updating Excel sheet with scraped data
+2025-05-21 09:13:50,333 - excel.graph_api - INFO - Retrieved drive ID: b!MXUqfmBgAkyqAi_g7J1PO_6yKSWnHbZCs3mpe4EkYuX6d8izcdJxRb78S6OW5SIB
+2025-05-21 09:13:53,781 - excel.graph_api - INFO - Retrieved 183 rows from Excel
+2025-05-21 09:13:57,635 - excel.graph_api - INFO - Updating range A185:M187 with 3 new entries
+2025-05-21 09:14:00,490 - excel.graph_api - INFO - Successfully added 3 new tournaments to Excel
+2025-05-21 09:14:00,501 - root - INFO - Excel sheet updated successfully
+2025-05-21 09:14:02,624 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-05-21 09:14:02,624 - root - INFO - Selenium driver closed
+2025-05-21 09:14:02,624 - root - INFO - Script execution completed

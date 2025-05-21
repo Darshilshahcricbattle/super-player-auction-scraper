@@ -14,19 +14,27 @@ import os
 class SeleniumScraper:
     def __init__(self):
         self.driver = None
-        self.logger = logging.getLogger(__name__)
-
-    def initialize_driver(self):
-        """Initialize the Chrome webdriver with appropriate options"""
+        self.logger = logging.getLogger(__name__)    
+        def initialize_driver(self):
+            """Initialize the Chrome webdriver with appropriate options"""
         options = Options()
-        # Comment out headless mode for debugging
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1080')
         
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        # Check if running in GitHub Actions
+        if os.environ.get('GITHUB_ACTIONS') == 'true':
+            # In GitHub Actions, use the pre-installed Chrome
+            self.logger.info("Running in GitHub Actions environment")
+            options.binary_location = "/usr/bin/google-chrome"
+            self.driver = webdriver.Chrome(options=options)
+        else:
+            # In local environment, use webdriver-manager
+            self.logger.info("Running in local environment")
+            self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+            
         self.driver.maximize_window()
         self.logger.info("Chrome driver initialized successfully")
 

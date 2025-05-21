@@ -1,0 +1,50 @@
+2025-05-20 14:23:58,557 - root - INFO - Logger initialized successfully
+2025-05-20 14:23:58,557 - root - INFO - Log file: C:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\super-player-auction-scraper\logs\scraper_20250520_142358.log
+2025-05-20 14:23:58,557 - root - INFO - Starting Super Player Auction scraper
+2025-05-20 14:23:58,558 - utils.config - INFO - Using credentials from alternate path: c:\Users\darsh\OneDrive\Desktop\Selenium testing\chromedriver-win64 (1)\chromedriver-win64\Scapper_superplayer\id.txt
+2025-05-20 14:23:58,558 - utils.config - INFO - Credentials loaded successfully
+2025-05-20 14:23:58,560 - utils.config - INFO - Settings loaded successfully
+2025-05-20 14:23:58,560 - root - INFO - Initializing Selenium scraper
+2025-05-20 14:23:58,560 - WDM - INFO - ====== WebDriver manager ======
+2025-05-20 14:23:59,872 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 14:24:00,284 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 14:24:00,472 - WDM - INFO - There is no [win64] chromedriver "136.0.7103.94" for browser google-chrome "136.0.7103" in cache
+2025-05-20 14:24:00,472 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 14:24:01,108 - WDM - INFO - WebDriver version 136.0.7103.94 selected
+2025-05-20 14:24:01,108 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 14:24:01,108 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 14:24:01,388 - WDM - INFO - Driver downloading response is 200
+2025-05-20 14:24:02,093 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-20 14:24:03,692 - WDM - INFO - Driver has been saved in cache [C:\Users\darsh\.wdm\drivers\chromedriver\win64\136.0.7103.94]
+2025-05-20 14:24:05,760 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-05-20 14:24:05,761 - root - INFO - Scraping tournament data
+2025-05-20 14:24:05,761 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-05-20 14:24:27,397 - scraper.selenium_scraper - ERROR - Error during scraping: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0083FC83+61635]
+	GetHandleVerifier [0x0083FCC4+61700]
+	(No symbol) [0x006605D3]
+	(No symbol) [0x006A899E]
+	(No symbol) [0x006A8D3B]
+	(No symbol) [0x006F0E12]
+	(No symbol) [0x006CD2E4]
+	(No symbol) [0x006EE61B]
+	(No symbol) [0x006CD096]
+	(No symbol) [0x0069C840]
+	(No symbol) [0x0069D6A4]
+	GetHandleVerifier [0x00AC45A3+2701795]
+	GetHandleVerifier [0x00ABFD26+2683238]
+	GetHandleVerifier [0x00ADAA6E+2793134]
+	GetHandleVerifier [0x00856945+155013]
+	GetHandleVerifier [0x0085D02D+181357]
+	GetHandleVerifier [0x008474D8+92440]
+	GetHandleVerifier [0x00847680+92864]
+	GetHandleVerifier [0x00832070+5296]
+	BaseThreadInitThunk [0x75167BA9+25]
+	RtlInitializeExceptionChain [0x7759C36B+107]
+	RtlClearBits [0x7759C2EF+191]
+
+2025-05-20 14:24:27,397 - root - WARNING - No tournament data found
+2025-05-20 14:24:29,499 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-05-20 14:24:29,499 - root - INFO - Selenium driver closed
+2025-05-20 14:24:29,499 - root - INFO - Script execution completed
