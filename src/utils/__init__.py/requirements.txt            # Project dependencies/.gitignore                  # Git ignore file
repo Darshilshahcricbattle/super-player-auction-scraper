@@ -1,0 +1,5 @@
+requirements.txt
+Selenium==4.1.0
+requests==2.26.0
+msal==1.16.0
+openpyxl==3.0.9

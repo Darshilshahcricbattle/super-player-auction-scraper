@@ -1,0 +1,23 @@
+# Python-related
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Virtual environment
+venv/
+env/
+
+# Logs and data
+logs/
+*.log
+data/
+
+# Credentials (protect these!)
+id.txt
+credentials.json
+.env

@@ -1,0 +1,41 @@
+import json
+from scraper.selenium_scraper import SeleniumScraper
+from excel.graph_api import GraphAPI
+from utils.config import load_config
+from utils.logger import Logger
+
+def main():
+    # Load configuration settings
+    config = load_config()
+    
+    # Initialize logger
+    logger = Logger()
+    logger.setup_logger()
+
+    try:
+        # Initialize the Selenium scraper
+        scraper = SeleniumScraper()
+        scraper.initialize_driver()
+
+        # Scrape tournament data
+        tournament_data = scraper.scrape_tournament_data()
+        logger.log_info("Tournament data scraped successfully.")
+
+        # Initialize Graph API for Excel update
+        graph_api = GraphAPI()
+        graph_api.authenticate()
+
+        # Update the shared Excel sheet with scraped data
+        graph_api.update_excel(tournament_data)
+        logger.log_info("Excel sheet updated successfully.")
+
+    except Exception as e:
+        logger.log_info(f"An error occurred: {e}")
+
+    finally:
+        # Close the Selenium driver
+        scraper.close_driver()
+        logger.log_info("Selenium driver closed.")
+
+if __name__ == "__main__":
+    main()

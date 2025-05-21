@@ -1,0 +1,16 @@
+class GraphAPI:
+    def __init__(self, credentials):
+        self.credentials = credentials
+        self.access_token = None
+
+    def authenticate(self):
+        # Logic to authenticate with Microsoft Graph API using credentials
+        pass
+
+    def update_excel(self, data):
+        # Logic to update the shared Excel sheet with the scraped tournament data
+        pass
+
+    def get_excel_data(self):
+        # Logic to retrieve data from the shared Excel sheet
+        pass
