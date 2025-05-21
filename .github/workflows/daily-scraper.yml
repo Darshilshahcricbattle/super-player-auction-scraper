@@ -1,16 +1,16 @@
 name: Daily Scraper
 
-# ─── Grant the GITHUB_TOKEN permission to fetch & run actions/upload‑artifact ───
+# ─── GITHUB_TOKEN permissions ──────────────────────────────────────────────────
 permissions:
-  contents: read      # allow checkout, reading code
-  actions: write      # allow uploading artifacts
-  id-token: write     # (if you ever use OIDC)
-  packages: read      # default
+  contents: write    # needed for git push via the checkout token
+  actions: read      # needed to download + run upload‑artifact@v3
+  id-token: write    # keep if you ever use OIDC
+  packages: read     # keep as default
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # every day at 10:00 UTC
-  workflow_dispatch:      # manual trigger
+    - cron: '0 10 * * *'    # every day at 10:00 UTC
+  workflow_dispatch:       # manual trigger
 
 jobs:
   scrape:
@@ -23,12 +23,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: Set up Python 3.10
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
 
-      - name: Install Chrome (needed for Selenium)
+      - name: Install Chrome (for Selenium)
         continue-on-error: true
         run: |
           sudo apt-get update
@@ -42,7 +42,7 @@ jobs:
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
           google-chrome --version
 
-      - name: Install Python dependencies
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -65,7 +65,7 @@ jobs:
             data/
             logs/
 
-      - name: Commit & push changes back to repo
+      - name: Commit & push data/​logs back to repo
         if: success()
         run: |
           git config --global user.name  'Darshilshahcricbattle'
@@ -73,3 +73,24 @@ jobs:
           git add data/ logs/
           git commit -m "Daily scrape: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
+
+  notify-email-failure:
+    needs: scrape
+    if: ${{ failure() }}
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Send email on failure
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}   # must be a Gmail App Password
+          subject: '❗ Daily Scraper Failed'
+          body: |
+            The daily scraper job has failed.
+            View logs here:
+            ${{ github.server_url }}/${{ github.repository }}/actions
+          to: darshil@cricbattle.com
+          from: GitHub Actions
