@@ -1,95 +1,69 @@
 name: Daily Scraper
 
-# ─── Grant GITHUB_TOKEN the ability to fetch & run upload‑artifact@v3 ───────────
-permissions:
-  contents: write    # for the later git-push step
-  actions: read      # to download & run actions/upload-artifact@v3
+# Repository: https://github.com/Darshilshahcricbattle/super-player-auction-scraper
+# Owner: Darshilshahcricbattle
+# Contact: darshil@cricbattle.com
 
 on:
   schedule:
-    - cron: '0 10 * * *'    # every day at 10:00 UTC
-  workflow_dispatch:       # allow manual runs
+    # Run every day at 10:00 AM UTC (adjust as needed for your timezone)
+    - cron: '0 10 * * *'
+  # Allow manual triggering for testing
+  workflow_dispatch:
 
 jobs:
   scrape:
-    runs-on: ubuntu-22.04
-
+    runs-on: ubuntu-latest
+    # Add permissions for GITHUB_TOKEN
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-
+        
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-
-      - name: Install Chrome (for Selenium)
-        continue-on-error: true
+          
+      - name: Install Chrome
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget unzip fonts-liberation \
-            libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 \
-            libcups2 libdbus-1-3 libdrm2 libgbm1 libgtk-3-0 \
-            libnspr4 libnss3 libxcomposite1 libxdamage1 \
-            libxfixes3 libxkbcommon0 libxrandr2 libxss1 \
-            libxtst6 xdg-utils
+          sudo apt-get install -y wget unzip fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libatspi2.0-0 libcups2 libdbus-1-3 libdrm2 libgbm1 libgtk-3-0 libnspr4 libnss3 libxcomposite1 libxdamage1 libxfixes3 libxkbcommon0 libxrandr2 xdg-utils
           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
           google-chrome --version
-
-      - name: Install Python dependencies
+          
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
+          
       - name: Run scraper
         env:
-          AZURE_CLIENT_ID:     ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_TENANT_ID:     ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-          GITHUB_ACTIONS:      'true'
+          GITHUB_ACTIONS: 'true'
         run: |
-          echo "=== Running scraper ==="
-          python src/main.py || { echo '✖ Scraper failed'; exit 1; }
-
-      - name: Upload scraped data as artifact
-        uses: actions/upload-artifact@v3
+          python src/main.py
+          
+      - name: Upload scraped data
+        uses: actions/upload-artifact@v2  # Changed to v2 to fix the version error
         with:
           name: scraped-data
           path: |
             data/
             logs/
-
-      - name: Commit & push data/​logs back to repo
+            
+      # Commit data back to the repository
+      - name: Commit data back to repository
         if: success()
         run: |
-          git config --global user.name  'Darshilshahcricbattle'
+          git config --global user.name 'Darshilshahcricbattle'
           git config --global user.email 'darshil@cricbattle.com'
           git add data/ logs/
           git commit -m "Daily scrape: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
-
-  notify-email-failure:
-    needs: scrape
-    if: ${{ failure() }}
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Send email on failure
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}   # Gmail App Password
-          subject: '❗ Daily Scraper Failed'
-          body: |
-            The daily scraper job has failed.
-            View logs here:
-            ${{ github.server_url }}/${{ github.repository }}/actions
-          to: darshil@cricbattle.com
-          from: GitHub Actions
-
