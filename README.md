@@ -40,7 +40,7 @@ git push -u origin main
 
 ### 3. Set up GitHub Secrets
 
-To securely store your Microsoft Graph API credentials:
+To securely store your credentials:
 
 1. Go to your repository on GitHub
 2. Click on "Settings" > "Secrets and variables" > "Actions"
@@ -49,6 +49,10 @@ To securely store your Microsoft Graph API credentials:
    - Name: `AZURE_CLIENT_ID` - Value: Your Azure application client ID
    - Name: `AZURE_TENANT_ID` - Value: Your Azure tenant ID
    - Name: `AZURE_CLIENT_SECRET` - Value: Your Azure client secret
+   
+   For email notifications when the job fails:
+   - Name: `EMAIL_USERNAME` - Value: Your Gmail username/email
+   - Name: `EMAIL_PASSWORD` - Value: Your Gmail app password (not your regular password)
 
 ### 4. Enable GitHub Actions
 
@@ -72,6 +76,8 @@ To test if everything is set up correctly:
 - The scraped data is saved to the repository
 - You don't need to have your computer on or connected to the internet
 - All results are stored in your private GitHub repository
+- Email notifications are sent to darshil@cricbattle.com if the job fails
+- All commits to the repository will be made with your username and email
 
 ## Troubleshooting
 

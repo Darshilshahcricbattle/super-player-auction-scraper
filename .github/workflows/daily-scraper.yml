@@ -1,5 +1,9 @@
 name: Daily Scraper
 
+# Repository: https://github.com/Darshilshahcricbattle/super-player-auction-scraper
+# Owner: Darshilshahcricbattle
+# Contact: darshil@cricbattle.com
+
 on:
   schedule:
     # Run every day at 10:00 AM UTC (adjust as needed for your timezone)
@@ -10,7 +14,6 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -50,12 +53,34 @@ jobs:
             data/
             logs/
             
-      # Optional: Commit data back to the repository
+      # Commit data back to the repository
       - name: Commit data back to repository
         if: success()
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
+          git config --global user.name 'Darshilshahcricbattle'
+          git config --global user.email 'darshil@cricbattle.com'
           git add data/ logs/
           git commit -m "Daily scrape: $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push
+  
+  # Handle workflow failure with email notification
+  notify-email-failure:
+    needs: scrape
+    if: ${{ failure() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send email on failure
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: 'Super Player Auction Scraper: Daily Job Failed'
+          body: |
+            The daily scraper job has failed. Please check the GitHub Actions logs for more details:
+            https://github.com/Darshilshahcricbattle/super-player-auction-scraper/actions
+            
+            Job run on: ${{ github.event.repository.updated_at }}
+          to: darshil@cricbattle.com
+          from: GitHub Actions
