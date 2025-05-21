@@ -48,9 +48,9 @@ jobs:
       - name: Create credentials file
         run: |
           echo '{
-            "client_id": "${{ secrets.AZURE_CLIENT_ID }}",
-            "tenant_id": "${{ secrets.AZURE_TENANT_ID }}",
-            "client_secret": "${{ secrets.AZURE_CLIENT_SECRET }}"
+            "client_id": "'${{ secrets.AZURE_CLIENT_ID }}'",
+            "tenant_id": "'${{ secrets.AZURE_TENANT_ID }}'",
+            "client_secret": "'${{ secrets.AZURE_CLIENT_SECRET }}'"
           }' > id.txt
           
       - name: Run scraper
