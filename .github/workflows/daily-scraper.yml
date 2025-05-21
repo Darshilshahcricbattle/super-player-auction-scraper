@@ -22,6 +22,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          
+      - name: Configure Git
+        run: |
+          git config --global user.name 'Darshilshahcricbattle'
+          git config --global user.email 'darshil@cricbattle.com'
+          git pull origin main
         
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -53,17 +59,11 @@ jobs:
           AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
           GITHUB_ACTIONS: 'true'
-        run: |
-          python src/main.py
+        run: python src/main.py
 
-      - name: Pull latest changes
-        run: git pull origin main
-      # Commit data back to the repository
-      - name: Commit data back to repository
-        if: success()
+      - name: Commit and push changes
         run: |
-          git config --global user.name 'Darshilshahcricbattle'
-          git config --global user.email 'darshil@cricbattle.com'
           git add data/ logs/
           git commit -m "Daily scrape: $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          git push
+          git pull --rebase origin main
+          git push || (git pull --rebase origin main && git push)
