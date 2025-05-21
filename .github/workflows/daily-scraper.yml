@@ -58,7 +58,7 @@ jobs:
           python src/main.py || { echo '✖ Scraper failed'; exit 1; }
 
       - name: Upload scraped data as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: scraped-data
           path: |
