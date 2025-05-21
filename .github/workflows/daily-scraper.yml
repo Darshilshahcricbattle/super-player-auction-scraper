@@ -92,3 +92,4 @@ jobs:
             ${{ github.server_url }}/${{ github.repository }}/actions
           to: darshil@cricbattle.com
           from: GitHub Actions
+
