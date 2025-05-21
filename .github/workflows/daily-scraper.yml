@@ -1,16 +1,14 @@
 name: Daily Scraper
 
-# ─── GITHUB_TOKEN permissions ──────────────────────────────────────────────────
+# ─── Grant GITHUB_TOKEN the ability to fetch & run upload‑artifact@v3 ───────────
 permissions:
-  contents: write    # needed for git push via the checkout token
-  actions: read      # needed to download + run upload‑artifact@v3
-  id-token: write    # keep if you ever use OIDC
-  packages: read     # keep as default
+  contents: write    # for the later git-push step
+  actions: read      # to download & run actions/upload-artifact@v3
 
 on:
   schedule:
     - cron: '0 10 * * *'    # every day at 10:00 UTC
-  workflow_dispatch:       # manual trigger
+  workflow_dispatch:       # allow manual runs
 
 jobs:
   scrape:
@@ -42,7 +40,7 @@ jobs:
           sudo apt-get install -y ./google-chrome-stable_current_amd64.deb
           google-chrome --version
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -58,7 +56,7 @@ jobs:
           python src/main.py || { echo '✖ Scraper failed'; exit 1; }
 
       - name: Upload scraped data as artifact
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3
         with:
           name: scraped-data
           path: |
@@ -86,7 +84,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}   # must be a Gmail App Password
+          password: ${{ secrets.EMAIL_PASSWORD }}   # Gmail App Password
           subject: '❗ Daily Scraper Failed'
           body: |
             The daily scraper job has failed.
