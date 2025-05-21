@@ -14,9 +14,10 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    # Add permissions for GITHUB_TOKEN
+    # Add explicit permissions
     permissions:
       contents: write
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -50,15 +51,8 @@ jobs:
         run: |
           python src/main.py
           
-      - name: Upload scraped data
-        uses: actions/upload-artifact@v2  # Changed to v2 to fix the version error
-        with:
-          name: scraped-data
-          path: |
-            data/
-            logs/
-            
-      # Commit data back to the repository
+      # Instead of using the upload-artifact action, 
+      # let's simply commit the data directly
       - name: Commit data back to repository
         if: success()
         run: |
@@ -66,4 +60,4 @@ jobs:
           git config --global user.email 'darshil@cricbattle.com'
           git add data/ logs/
           git commit -m "Daily scrape: $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          git push
+          git push origin main
