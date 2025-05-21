@@ -1,0 +1,47 @@
+2025-05-21 11:16:44,008 - root - INFO - Logger initialized successfully
+2025-05-21 11:16:44,009 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20250521_111644.log
+2025-05-21 11:16:44,009 - root - INFO - Starting Super Player Auction scraper
+2025-05-21 11:16:44,009 - utils.config - INFO - Credentials loaded successfully from environment variables
+2025-05-21 11:16:44,009 - utils.config - INFO - Settings loaded successfully
+2025-05-21 11:16:44,009 - root - INFO - Initializing Selenium scraper
+2025-05-21 11:16:44,009 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2025-05-21 11:16:44,511 - selenium.webdriver.common.selenium_manager - WARNING - The chromedriver version (136.0.7103.92) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.92); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-21 11:16:45,836 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-05-21 11:16:45,836 - root - INFO - Scraping tournament data
+2025-05-21 11:16:45,836 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-05-21 11:16:49,555 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-05-21 11:16:54,560 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-05-21 11:17:07,093 - scraper.selenium_scraper - INFO - Saved page screenshot to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/screenshots/page_loaded_20250521111706.png
+2025-05-21 11:17:07,094 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-05-21 11:17:07,114 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-05-21 11:17:07,846 - scraper.selenium_scraper - INFO - Scraped tournament 1: Hariprabodham Premier League
+2025-05-21 11:17:08,543 - scraper.selenium_scraper - INFO - Scraped tournament 2: MARC Malappuram Premier league S2
+2025-05-21 11:17:09,252 - scraper.selenium_scraper - INFO - Scraped tournament 3: ArjunDMUP
+2025-05-21 11:17:09,952 - scraper.selenium_scraper - INFO - Scraped tournament 4: PALAKKAD CRICKET LEAGUE
+2025-05-21 11:17:10,648 - scraper.selenium_scraper - INFO - Scraped tournament 5: EᒪITE ᑕᖇIᑕKET ᑕᕼᗩᗰᑭIOᑎᔕᕼIᑭ
+2025-05-21 11:17:11,344 - scraper.selenium_scraper - INFO - Scraped tournament 6: Hariprabodham Parivar Cricket League
+2025-05-21 11:17:12,052 - scraper.selenium_scraper - INFO - Scraped tournament 7: JSG Elite Multi-Sports
+2025-05-21 11:17:12,755 - scraper.selenium_scraper - INFO - Scraped tournament 8: RJ54 CRICKET LEAGUE SEASON 2
+2025-05-21 11:17:13,454 - scraper.selenium_scraper - INFO - Scraped tournament 9: APL 2025
+2025-05-21 11:17:14,152 - scraper.selenium_scraper - INFO - Scraped tournament 10: PKPPL Season 06
+2025-05-21 11:17:14,846 - scraper.selenium_scraper - INFO - Scraped tournament 11: MPL Mega Auction
+2025-05-21 11:17:15,539 - scraper.selenium_scraper - INFO - Scraped tournament 12: Bhatgram Premier League
+2025-05-21 11:17:16,248 - scraper.selenium_scraper - INFO - Scraped tournament 13: TITAN LEAGUE GRAND SEASON 3
+2025-05-21 11:17:16,946 - scraper.selenium_scraper - INFO - Scraped tournament 14: SUPER LEAGUE
+2025-05-21 11:17:17,641 - scraper.selenium_scraper - INFO - Scraped tournament 15: TITAN LEAGUE GRAND SEASON 3
+2025-05-21 11:17:18,336 - scraper.selenium_scraper - INFO - Scraped tournament 16: Indian Premier League Auction 2025
+2025-05-21 11:17:19,043 - scraper.selenium_scraper - INFO - Scraped tournament 17: Amar Ujala Premier League
+2025-05-21 11:17:19,743 - scraper.selenium_scraper - INFO - Scraped tournament 18: Kakina Super League-2025
+2025-05-21 11:17:20,448 - scraper.selenium_scraper - INFO - Scraped tournament 19: Hpl
+2025-05-21 11:17:21,140 - scraper.selenium_scraper - INFO - Scraped tournament 20: FABLEAGUE PREMIER
+2025-05-21 11:17:21,140 - root - INFO - Successfully scraped 20 tournaments
+2025-05-21 11:17:21,141 - root - INFO - Saved scraped data to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/data/tournament_data_20250521-111721.json
+2025-05-21 11:17:21,141 - root - INFO - Initializing Graph API
+2025-05-21 11:17:21,141 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-05-21 11:17:21,142 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-05-21 11:17:21,142 - root - INFO - Authenticating with Microsoft Graph API
+2025-05-21 11:17:21,757 - excel.graph_api - ERROR - Authentication failed: AADSTS7000215: Invalid client secret provided. Ensure the secret being sent in the request is the client secret value, not the client secret ID, for a secret added to app 'f45467f0-629b-4712-a029-cd1289854747'. Trace ID: 5865e999-39c3-4046-9321-604d3fda9f00 Correlation ID: b266e0fe-3a31-490f-8bd6-0ed8030ee1ca Timestamp: 2025-05-21 11:17:21Z
+2025-05-21 11:17:21,757 - root - ERROR - Failed to authenticate with Microsoft Graph API
+2025-05-21 11:17:21,828 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-05-21 11:17:21,828 - root - INFO - Selenium driver closed
+2025-05-21 11:17:21,828 - root - INFO - Script execution completed
