@@ -1,0 +1,13 @@
+2025-05-21 10:44:17,434 - root - INFO - Logger initialized successfully
+2025-05-21 10:44:17,434 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20250521_104417.log
+2025-05-21 10:44:17,434 - root - INFO - Starting Super Player Auction scraper
+2025-05-21 10:44:17,434 - utils.config - INFO - Credentials loaded successfully from environment variables
+2025-05-21 10:44:17,434 - utils.config - INFO - Settings loaded successfully
+2025-05-21 10:44:17,434 - root - INFO - Initializing Selenium scraper
+2025-05-21 10:44:17,434 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2025-05-21 10:44:18,903 - selenium.webdriver.common.selenium_manager - WARNING - The chromedriver version (136.0.7103.92) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (136.0.7103.92); currently, chromedriver 136.0.7103.94 is recommended for chrome 136.*, so it is advised to delete the driver in PATH and retry
+2025-05-21 10:44:24,211 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-05-21 10:44:24,211 - root - ERROR - An error occurred: 'SeleniumScraper' object has no attribute 'initialize_driver'
+2025-05-21 10:44:24,270 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-05-21 10:44:24,271 - root - INFO - Selenium driver closed
+2025-05-21 10:44:24,271 - root - INFO - Script execution completed
