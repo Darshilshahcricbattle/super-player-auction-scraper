@@ -17,6 +17,12 @@ jobs:
     permissions:
       contents: write
       
+    env:
+      AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+      GITHUB_ACTIONS: 'true'
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -47,16 +53,13 @@ jobs:
           
       - name: Create credentials file
         run: |
-          echo "Application (client) ID: ${{ secrets.AZURE_CLIENT_ID }}" > id.txt
-          echo "Directory (tenant) ID: ${{ secrets.AZURE_TENANT_ID }}" >> id.txt
-          echo "Value: ${{ secrets.AZURE_CLIENT_SECRET }}" >> id.txt
+          echo '{
+            "client_id": "${{ secrets.AZURE_CLIENT_ID }}",
+            "tenant_id": "${{ secrets.AZURE_TENANT_ID }}",
+            "client_secret": "${{ secrets.AZURE_CLIENT_SECRET }}"
+          }' > id.txt
           
       - name: Run scraper
-        env:
-          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-          GITHUB_ACTIONS: 'true'
         run: python src/main.py
 
       - name: Commit and push changes
