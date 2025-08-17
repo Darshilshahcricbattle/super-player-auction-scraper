@@ -1,0 +1,52 @@
+2025-08-17 10:13:45,768 - root - INFO - Logger initialized successfully
+2025-08-17 10:13:45,768 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20250817_101345.log
+2025-08-17 10:13:45,768 - root - INFO - Starting Super Player Auction scraper
+2025-08-17 10:13:45,769 - utils.config - INFO - Credentials loaded from environment variables
+2025-08-17 10:13:45,769 - utils.config - INFO - Settings loaded successfully
+2025-08-17 10:13:45,769 - root - INFO - Initializing Selenium scraper
+2025-08-17 10:13:45,769 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2025-08-17 10:13:46,946 - selenium.webdriver.common.selenium_manager - WARNING - The chromedriver version (139.0.7258.66) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (139.0.7258.66); currently, chromedriver 139.0.7258.68 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry
+2025-08-17 10:13:51,775 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-08-17 10:13:51,775 - root - INFO - Scraping tournament data
+2025-08-17 10:13:51,775 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-08-17 10:13:55,974 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-08-17 10:14:00,979 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-08-17 10:14:13,110 - scraper.selenium_scraper - INFO - Saved page screenshot to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/screenshots/page_loaded_20250817101413.png
+2025-08-17 10:14:13,111 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-08-17 10:14:13,138 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-08-17 10:14:13,856 - scraper.selenium_scraper - INFO - Scraped tournament 1: Udupi Tennis Premier League
+2025-08-17 10:14:14,547 - scraper.selenium_scraper - INFO - Scraped tournament 2: UNITY CUP Series Season 2 (2025-26)
+2025-08-17 10:14:15,279 - scraper.selenium_scraper - INFO - Scraped tournament 3: Friendship Cup Season 6
+2025-08-17 10:14:15,966 - scraper.selenium_scraper - INFO - Scraped tournament 4: DOXA CRICKET LEAGUE 2025 PLAYERS ALLOCATION
+2025-08-17 10:14:16,656 - scraper.selenium_scraper - INFO - Scraped tournament 5: NPL Titan Cup
+2025-08-17 10:14:17,348 - scraper.selenium_scraper - INFO - Scraped tournament 6: Canvas Warriors Cricket Carnival (CWCC),Season 1,2025
+2025-08-17 10:14:18,037 - scraper.selenium_scraper - INFO - Scraped tournament 7: BPL SEASON 3
+2025-08-17 10:14:18,727 - scraper.selenium_scraper - INFO - Scraped tournament 8: ArjunDMUP
+2025-08-17 10:14:19,414 - scraper.selenium_scraper - INFO - Scraped tournament 9: Masters Premier League Season 2025-26.
+2025-08-17 10:14:20,105 - scraper.selenium_scraper - INFO - Scraped tournament 10: LPL SEASON 4
+2025-08-17 10:14:20,799 - scraper.selenium_scraper - INFO - Scraped tournament 11: ODA Kasliwal Trophy Squash Premier League
+2025-08-17 10:14:21,492 - scraper.selenium_scraper - INFO - Scraped tournament 12: KINGS CUP
+2025-08-17 10:14:22,187 - scraper.selenium_scraper - INFO - Scraped tournament 13: FRIENDS PICKLE BALL LEAGUE 2025
+2025-08-17 10:14:22,874 - scraper.selenium_scraper - INFO - Scraped tournament 14: INDIRANAGAR CLUB SNOOKER AND SLOSH LEAGUE
+2025-08-17 10:14:23,568 - scraper.selenium_scraper - INFO - Scraped tournament 15: SPORTS CORNER LEAGUE (SEASON-2)
+2025-08-17 10:14:24,256 - scraper.selenium_scraper - INFO - Scraped tournament 16: MR Cricket League Season 2
+2025-08-17 10:14:24,945 - scraper.selenium_scraper - INFO - Scraped tournament 17: BIG BASH LEAGUE
+2025-08-17 10:14:25,637 - scraper.selenium_scraper - INFO - Scraped tournament 18: Sikar Ka IPL 2025
+2025-08-17 10:14:26,327 - scraper.selenium_scraper - INFO - Scraped tournament 19: Aanjana premier League Sardarpura (Rana)
+2025-08-17 10:14:27,017 - scraper.selenium_scraper - INFO - Scraped tournament 20: SANDALWOOD PREMIER LEAGUE
+2025-08-17 10:14:27,017 - root - INFO - Successfully scraped 20 tournaments
+2025-08-17 10:14:27,018 - root - INFO - Saved scraped data to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/data/tournament_data_20250817-101427.json
+2025-08-17 10:14:27,018 - root - INFO - Initializing Graph API
+2025-08-17 10:14:27,018 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-08-17 10:14:27,018 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-08-17 10:14:27,018 - root - INFO - Authenticating with Microsoft Graph API
+2025-08-17 10:14:27,546 - excel.graph_api - INFO - Authentication successful
+2025-08-17 10:14:27,546 - root - INFO - Updating Excel sheet with scraped data
+2025-08-17 10:14:28,005 - excel.graph_api - INFO - Retrieved drive ID: b!MXUqfmBgAkyqAi_g7J1PO_6yKSWnHbZCs3mpe4EkYuX6d8izcdJxRb78S6OW5SIB
+2025-08-17 10:14:29,098 - excel.graph_api - INFO - Retrieved 392 rows from Excel
+2025-08-17 10:14:29,739 - excel.graph_api - INFO - Updating range A394:M395 with 2 new entries
+2025-08-17 10:14:32,693 - excel.graph_api - INFO - Successfully added 2 new tournaments to Excel
+2025-08-17 10:14:32,694 - root - INFO - Excel sheet updated successfully
+2025-08-17 10:14:32,764 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-08-17 10:14:32,764 - root - INFO - Selenium driver closed
+2025-08-17 10:14:32,764 - root - INFO - Script execution completed
