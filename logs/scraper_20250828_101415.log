@@ -1,0 +1,52 @@
+2025-08-28 10:14:15,799 - root - INFO - Logger initialized successfully
+2025-08-28 10:14:15,799 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20250828_101415.log
+2025-08-28 10:14:15,799 - root - INFO - Starting Super Player Auction scraper
+2025-08-28 10:14:15,799 - utils.config - INFO - Credentials loaded from environment variables
+2025-08-28 10:14:15,799 - utils.config - INFO - Settings loaded successfully
+2025-08-28 10:14:15,799 - root - INFO - Initializing Selenium scraper
+2025-08-28 10:14:15,799 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2025-08-28 10:14:16,191 - selenium.webdriver.common.selenium_manager - WARNING - The chromedriver version (139.0.7258.138) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (139.0.7258.138); currently, chromedriver 139.0.7258.154 is recommended for chrome 139.*, so it is advised to delete the driver in PATH and retry
+2025-08-28 10:14:17,483 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-08-28 10:14:17,483 - root - INFO - Scraping tournament data
+2025-08-28 10:14:17,484 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-08-28 10:14:20,388 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-08-28 10:14:25,393 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-08-28 10:14:37,510 - scraper.selenium_scraper - INFO - Saved page screenshot to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/screenshots/page_loaded_20250828101437.png
+2025-08-28 10:14:37,510 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-08-28 10:14:37,528 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-08-28 10:14:38,237 - scraper.selenium_scraper - INFO - Scraped tournament 1: TPL Season 6
+2025-08-28 10:14:38,922 - scraper.selenium_scraper - INFO - Scraped tournament 2: Agarwal Premier League 2025
+2025-08-28 10:14:39,611 - scraper.selenium_scraper - INFO - Scraped tournament 3: IYC
+2025-08-28 10:14:40,298 - scraper.selenium_scraper - INFO - Scraped tournament 4: SBFL SEASON 5
+2025-08-28 10:14:40,981 - scraper.selenium_scraper - INFO - Scraped tournament 5: BPL SEASON 3
+2025-08-28 10:14:41,662 - scraper.selenium_scraper - INFO - Scraped tournament 6: Masters Premier League Season 2025-26
+2025-08-28 10:14:42,343 - scraper.selenium_scraper - INFO - Scraped tournament 7: Sarsangan U19 Boys & Girls Cricket Series 2025-26
+2025-08-28 10:14:43,029 - scraper.selenium_scraper - INFO - Scraped tournament 8: Sarsangan +40 Cricket Series 2025-26
+2025-08-28 10:14:43,711 - scraper.selenium_scraper - INFO - Scraped tournament 9: Sarsangan +45 Veterans Cricket Series 2025-26
+2025-08-28 10:14:44,392 - scraper.selenium_scraper - INFO - Scraped tournament 10: Sarsangan Super Series Cricket 2025-26
+2025-08-28 10:14:45,073 - scraper.selenium_scraper - INFO - Scraped tournament 11: NPL Titan Cup
+2025-08-28 10:14:45,760 - scraper.selenium_scraper - INFO - Scraped tournament 12: WEDNESDAY FOOTBALL CLUB
+2025-08-28 10:14:46,442 - scraper.selenium_scraper - INFO - Scraped tournament 13: Kerala Premier League
+2025-08-28 10:14:47,126 - scraper.selenium_scraper - INFO - Scraped tournament 14: RENSA BSPL -2
+2025-08-28 10:14:47,811 - scraper.selenium_scraper - INFO - Scraped tournament 15: RAIPUR SILVER PREMIER LEAGUE
+2025-08-28 10:14:48,492 - scraper.selenium_scraper - INFO - Scraped tournament 16: Sikar Ka IPL 2025
+2025-08-28 10:14:49,175 - scraper.selenium_scraper - INFO - Scraped tournament 17: Aanjana premier League Sardarpura (Rana)
+2025-08-28 10:14:49,857 - scraper.selenium_scraper - INFO - Scraped tournament 18: SANDALWOOD PREMIER LEAGUE
+2025-08-28 10:14:50,538 - scraper.selenium_scraper - INFO - Scraped tournament 19: SSAPL SEASON - 2
+2025-08-28 10:14:51,227 - scraper.selenium_scraper - INFO - Scraped tournament 20: PALEJ PREMIER LEAGUE
+2025-08-28 10:14:51,227 - root - INFO - Successfully scraped 20 tournaments
+2025-08-28 10:14:51,228 - root - INFO - Saved scraped data to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/data/tournament_data_20250828-101451.json
+2025-08-28 10:14:51,228 - root - INFO - Initializing Graph API
+2025-08-28 10:14:51,228 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-08-28 10:14:51,228 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-08-28 10:14:51,228 - root - INFO - Authenticating with Microsoft Graph API
+2025-08-28 10:14:51,402 - excel.graph_api - INFO - Authentication successful
+2025-08-28 10:14:51,402 - root - INFO - Updating Excel sheet with scraped data
+2025-08-28 10:14:52,154 - excel.graph_api - INFO - Retrieved drive ID: b!MXUqfmBgAkyqAi_g7J1PO_6yKSWnHbZCs3mpe4EkYuX6d8izcdJxRb78S6OW5SIB
+2025-08-28 10:14:53,383 - excel.graph_api - INFO - Retrieved 430 rows from Excel
+2025-08-28 10:14:54,125 - excel.graph_api - INFO - Updating range A432:M432 with 1 new entries
+2025-08-28 10:14:55,223 - excel.graph_api - INFO - Successfully added 1 new tournaments to Excel
+2025-08-28 10:14:55,224 - root - INFO - Excel sheet updated successfully
+2025-08-28 10:14:55,291 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-08-28 10:14:55,291 - root - INFO - Selenium driver closed
+2025-08-28 10:14:55,291 - root - INFO - Script execution completed
