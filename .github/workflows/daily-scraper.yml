@@ -8,6 +8,7 @@ on:
   schedule:
     # Run every day at 10:00 AM UTC (adjust as needed for your timezone)
     - cron: '0 10 * * *'
+    - cron: '0 15 * * *'
   # Allow manual triggering for testing
   workflow_dispatch:
 
