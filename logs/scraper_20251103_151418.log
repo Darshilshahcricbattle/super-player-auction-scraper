@@ -1,0 +1,51 @@
+2025-11-03 15:14:18,483 - root - INFO - Logger initialized successfully
+2025-11-03 15:14:18,483 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20251103_151418.log
+2025-11-03 15:14:18,483 - root - INFO - Starting Super Player Auction scraper
+2025-11-03 15:14:18,483 - utils.config - INFO - Credentials loaded from environment variables
+2025-11-03 15:14:18,483 - utils.config - INFO - Settings loaded successfully
+2025-11-03 15:14:18,483 - root - INFO - Initializing Selenium scraper
+2025-11-03 15:14:18,484 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2025-11-03 15:14:20,383 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-11-03 15:14:20,384 - root - INFO - Scraping tournament data
+2025-11-03 15:14:20,384 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-11-03 15:14:20,656 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-11-03 15:14:25,661 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-11-03 15:14:37,770 - scraper.selenium_scraper - INFO - Saved page screenshot to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/screenshots/page_loaded_20251103151437.png
+2025-11-03 15:14:37,770 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-11-03 15:14:37,788 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-11-03 15:14:38,500 - scraper.selenium_scraper - INFO - Scraped tournament 1: NORTH INDIA CORPORATE CRICKET LEAGUE SEASON 1
+2025-11-03 15:14:39,195 - scraper.selenium_scraper - INFO - Scraped tournament 2: GOA VETERANS CRICKET ASSOCIATION
+2025-11-03 15:14:39,882 - scraper.selenium_scraper - INFO - Scraped tournament 3: B&B MEGA AUCTION SEASON3
+2025-11-03 15:14:40,567 - scraper.selenium_scraper - INFO - Scraped tournament 4: SUR PREMIER LEAGUE SEASON - 3
+2025-11-03 15:14:41,256 - scraper.selenium_scraper - INFO - Scraped tournament 5: KATEEL PREMIER LEAGUE 2025
+2025-11-03 15:14:41,954 - scraper.selenium_scraper - INFO - Scraped tournament 6: SUPER 100
+2025-11-03 15:14:42,636 - scraper.selenium_scraper - INFO - Scraped tournament 7: The Yellow Elephant Interiors SPL S2
+2025-11-03 15:14:43,316 - scraper.selenium_scraper - INFO - Scraped tournament 8: नीमच क्रिकेट लीग 2025
+2025-11-03 15:14:43,997 - scraper.selenium_scraper - INFO - Scraped tournament 9: ICCPL Men's Auction 2025
+2025-11-03 15:14:44,677 - scraper.selenium_scraper - INFO - Scraped tournament 10: ICCPL Women's Auction 2025
+2025-11-03 15:14:45,368 - scraper.selenium_scraper - INFO - Scraped tournament 11: Arjun DEMO
+2025-11-03 15:14:46,059 - scraper.selenium_scraper - INFO - Scraped tournament 12: ABSA BUNTS CUP 4TH EDITION
+2025-11-03 15:14:46,746 - scraper.selenium_scraper - INFO - Scraped tournament 13: Big Bash Bahraich
+2025-11-03 15:14:47,430 - scraper.selenium_scraper - INFO - Scraped tournament 14: NAYTA PATEL TROPHY JETPURA
+2025-11-03 15:14:48,115 - scraper.selenium_scraper - INFO - Scraped tournament 15: JPL-season-1
+2025-11-03 15:14:48,802 - scraper.selenium_scraper - INFO - Scraped tournament 16: Vardhamanpura Premier League 14
+2025-11-03 15:14:49,483 - scraper.selenium_scraper - INFO - Scraped tournament 17: BIKANER PREMIER LEAGUE 2025
+2025-11-03 15:14:50,159 - scraper.selenium_scraper - INFO - Scraped tournament 18: SMASHERS PROFESSIONAL CUP
+2025-11-03 15:14:50,847 - scraper.selenium_scraper - INFO - Scraped tournament 19: K P L SESSION 1
+2025-11-03 15:14:51,531 - scraper.selenium_scraper - INFO - Scraped tournament 20: BARAMATI CUP 2025 SEASON - 03
+2025-11-03 15:14:51,531 - root - INFO - Successfully scraped 20 tournaments
+2025-11-03 15:14:51,532 - root - INFO - Saved scraped data to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/data/tournament_data_20251103-151451.json
+2025-11-03 15:14:51,532 - root - INFO - Initializing Graph API
+2025-11-03 15:14:51,532 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-11-03 15:14:51,532 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-11-03 15:14:51,532 - root - INFO - Authenticating with Microsoft Graph API
+2025-11-03 15:14:51,745 - excel.graph_api - INFO - Authentication successful
+2025-11-03 15:14:51,746 - root - INFO - Updating Excel sheet with scraped data
+2025-11-03 15:14:52,658 - excel.graph_api - INFO - Retrieved drive ID: b!MXUqfmBgAkyqAi_g7J1PO_6yKSWnHbZCs3mpe4EkYuX6d8izcdJxRb78S6OW5SIB
+2025-11-03 15:14:55,336 - excel.graph_api - INFO - Retrieved 702 rows from Excel
+2025-11-03 15:14:56,855 - excel.graph_api - INFO - Updating range A704:M705 with 2 new entries
+2025-11-03 15:14:59,670 - excel.graph_api - INFO - Successfully added 2 new tournaments to Excel
+2025-11-03 15:14:59,672 - root - INFO - Excel sheet updated successfully
+2025-11-03 15:14:59,740 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-11-03 15:14:59,740 - root - INFO - Selenium driver closed
+2025-11-03 15:14:59,740 - root - INFO - Script execution completed
