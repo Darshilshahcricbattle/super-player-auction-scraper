@@ -1,0 +1,47 @@
+2025-11-23 10:13:23,318 - root - INFO - Logger initialized successfully
+2025-11-23 10:13:23,318 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20251123_101323.log
+2025-11-23 10:13:23,318 - root - INFO - Starting Super Player Auction scraper
+2025-11-23 10:13:23,318 - utils.config - INFO - Credentials loaded from environment variables
+2025-11-23 10:13:23,318 - utils.config - INFO - Settings loaded successfully
+2025-11-23 10:13:23,318 - root - INFO - Initializing Selenium scraper
+2025-11-23 10:13:23,319 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2025-11-23 10:13:23,600 - selenium.webdriver.common.selenium_manager - WARNING - The chromedriver version (142.0.7444.162) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (142.0.7444.162); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry
+2025-11-23 10:13:24,843 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2025-11-23 10:13:24,843 - root - INFO - Scraping tournament data
+2025-11-23 10:13:24,844 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2025-11-23 10:13:25,673 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2025-11-23 10:13:30,676 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2025-11-23 10:13:42,796 - scraper.selenium_scraper - INFO - Saved page screenshot to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/screenshots/page_loaded_20251123101342.png
+2025-11-23 10:13:42,796 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2025-11-23 10:13:42,815 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2025-11-23 10:13:43,540 - scraper.selenium_scraper - INFO - Scraped tournament 1: Uganavadi Champions League-2025 Nisarga Cup
+2025-11-23 10:13:44,310 - scraper.selenium_scraper - INFO - Scraped tournament 2: KARKALA BEDRA PREMIER LEAGUE 2025
+2025-11-23 10:13:45,003 - scraper.selenium_scraper - INFO - Scraped tournament 3: LEAGUE OF CHAMPIONS-1
+2025-11-23 10:13:45,691 - scraper.selenium_scraper - INFO - Scraped tournament 4: Arjun DEMO
+2025-11-23 10:13:46,391 - scraper.selenium_scraper - INFO - Scraped tournament 5: Streamify Cup Silver Category
+2025-11-23 10:13:47,100 - scraper.selenium_scraper - INFO - Scraped tournament 6: Streamify Cup Open Category
+2025-11-23 10:13:47,792 - scraper.selenium_scraper - INFO - Scraped tournament 7: ABSA BUNTS CUP 4TH EDITION
+2025-11-23 10:13:48,484 - scraper.selenium_scraper - INFO - Scraped tournament 8: CCL 2.0 PREMIER LEAGUE SEASON 1
+2025-11-23 10:13:49,176 - scraper.selenium_scraper - INFO - Scraped tournament 9: Bhatkal Premier League - 2026
+2025-11-23 10:13:49,877 - scraper.selenium_scraper - INFO - Scraped tournament 10: Sindhi Premier League 6.0
+2025-11-23 10:13:50,572 - scraper.selenium_scraper - INFO - Scraped tournament 11: Brotherhood Youth Premier League Season-2 2025-26
+2025-11-23 10:13:51,261 - scraper.selenium_scraper - INFO - Scraped tournament 12: Delta Football League
+2025-11-23 10:13:51,948 - scraper.selenium_scraper - INFO - Scraped tournament 13: PEYJAL NIGAM PREMIER LEAGUE
+2025-11-23 10:13:52,637 - scraper.selenium_scraper - INFO - Scraped tournament 14: JPL-season-1
+2025-11-23 10:13:53,323 - scraper.selenium_scraper - INFO - Scraped tournament 15: MPL SEASON-8
+2025-11-23 10:13:54,010 - scraper.selenium_scraper - INFO - Scraped tournament 16: Aurangabad Premier League Leather ball cricket tournament.
+2025-11-23 10:13:54,704 - scraper.selenium_scraper - INFO - Scraped tournament 17: Fighters Premier League
+2025-11-23 10:13:55,395 - scraper.selenium_scraper - INFO - Scraped tournament 18: શ્રી સૌરાષ્ટ્ર લેઉઆ પટેલ યુવક મંડળ , નવસારી
+2025-11-23 10:13:56,091 - scraper.selenium_scraper - INFO - Scraped tournament 19: CKPL - 2
+2025-11-23 10:13:56,778 - scraper.selenium_scraper - INFO - Scraped tournament 20: Jain Legend Championships
+2025-11-23 10:13:56,778 - root - INFO - Successfully scraped 20 tournaments
+2025-11-23 10:13:56,779 - root - INFO - Saved scraped data to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/data/tournament_data_20251123-101356.json
+2025-11-23 10:13:56,779 - root - INFO - Initializing Graph API
+2025-11-23 10:13:56,779 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2025-11-23 10:13:56,779 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2025-11-23 10:13:56,779 - root - INFO - Authenticating with Microsoft Graph API
+2025-11-23 10:13:57,280 - excel.graph_api - ERROR - Authentication failed: AADSTS7000222: The provided client secret keys for app 'f45467f0-629b-4712-a029-cd1289854747' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: 332862fc-1667-41d8-9756-ceef57a52500 Correlation ID: 03e78363-8c5f-444d-b4e4-564a4427a231 Timestamp: 2025-11-23 10:13:57Z
+2025-11-23 10:13:57,280 - root - ERROR - Failed to authenticate with Microsoft Graph API
+2025-11-23 10:13:57,347 - scraper.selenium_scraper - INFO - Chrome driver closed
+2025-11-23 10:13:57,347 - root - INFO - Selenium driver closed
+2025-11-23 10:13:57,347 - root - INFO - Script execution completed
