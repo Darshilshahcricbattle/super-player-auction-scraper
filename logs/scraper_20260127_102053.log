@@ -1,0 +1,52 @@
+2026-01-27 10:20:53,791 - root - INFO - Logger initialized successfully
+2026-01-27 10:20:53,791 - root - INFO - Log file: /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/scraper_20260127_102053.log
+2026-01-27 10:20:53,791 - root - INFO - Starting Super Player Auction scraper
+2026-01-27 10:20:53,791 - utils.config - INFO - Credentials loaded from environment variables
+2026-01-27 10:20:53,791 - utils.config - INFO - Settings loaded successfully
+2026-01-27 10:20:53,791 - root - INFO - Initializing Selenium scraper
+2026-01-27 10:20:53,791 - scraper.selenium_scraper - INFO - Running in GitHub Actions environment
+2026-01-27 10:20:55,419 - selenium.webdriver.common.selenium_manager - WARNING - The chromedriver version (144.0.7559.31) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (144.0.7559.59); currently, chromedriver 144.0.7559.96 is recommended for chrome 144.*, so it is advised to delete the driver in PATH and retry
+2026-01-27 10:21:02,962 - scraper.selenium_scraper - INFO - Chrome driver initialized successfully
+2026-01-27 10:21:02,962 - root - INFO - Scraping tournament data
+2026-01-27 10:21:02,962 - scraper.selenium_scraper - INFO - Starting to scrape tournament data
+2026-01-27 10:21:04,182 - scraper.selenium_scraper - INFO - Waiting for page to load...
+2026-01-27 10:21:09,188 - scraper.selenium_scraper - INFO - Scrolling to load all auction cards...
+2026-01-27 10:21:21,307 - scraper.selenium_scraper - INFO - Saved page screenshot to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/logs/screenshots/page_loaded_20260127102121.png
+2026-01-27 10:21:21,307 - scraper.selenium_scraper - INFO - Looking for auction cards...
+2026-01-27 10:21:21,329 - scraper.selenium_scraper - INFO - Found 20 auction cards
+2026-01-27 10:21:22,045 - scraper.selenium_scraper - INFO - Scraped tournament 1: TEEKLI Premier League
+2026-01-27 10:21:22,809 - scraper.selenium_scraper - INFO - Scraped tournament 2: NASHIK PREMIER LEAGUE SEASON VIII
+2026-01-27 10:21:23,495 - scraper.selenium_scraper - INFO - Scraped tournament 3: Lucknow Cricket League 2026
+2026-01-27 10:21:24,179 - scraper.selenium_scraper - INFO - Scraped tournament 4: ABPL - Season 5 | 2026 | Auction
+2026-01-27 10:21:24,862 - scraper.selenium_scraper - INFO - Scraped tournament 5: Calicut premier league Qatar
+2026-01-27 10:21:25,547 - scraper.selenium_scraper - INFO - Scraped tournament 6: PGCL 2.O
+2026-01-27 10:21:26,231 - scraper.selenium_scraper - INFO - Scraped tournament 7: SUBIC SRILANKAN PREMIER LEAGUE - SEASON 4 - 2026
+2026-01-27 10:21:26,913 - scraper.selenium_scraper - INFO - Scraped tournament 8: MCPL 2026
+2026-01-27 10:21:27,595 - scraper.selenium_scraper - INFO - Scraped tournament 9: SUPER FOOTBALL CHAMPIONSHIP
+2026-01-27 10:21:28,278 - scraper.selenium_scraper - INFO - Scraped tournament 10: Karneshwar premiere leauge (KPL- 3) karnawad
+2026-01-27 10:21:28,969 - scraper.selenium_scraper - INFO - Scraped tournament 11: MORNING PREMIER LEAGUE SEASON 11
+2026-01-27 10:21:29,651 - scraper.selenium_scraper - INFO - Scraped tournament 12: Simga Tennis Cricket League
+2026-01-27 10:21:30,333 - scraper.selenium_scraper - INFO - Scraped tournament 13: Friends Cup
+2026-01-27 10:21:31,018 - scraper.selenium_scraper - INFO - Scraped tournament 14: VBL 2026
+2026-01-27 10:21:31,700 - scraper.selenium_scraper - INFO - Scraped tournament 15: TOYAGONDI SUPER LEAGUE
+2026-01-27 10:21:32,383 - scraper.selenium_scraper - INFO - Scraped tournament 16: Area 7 Premier League Season 2
+2026-01-27 10:21:33,067 - scraper.selenium_scraper - INFO - Scraped tournament 17: KNPL
+2026-01-27 10:21:33,749 - scraper.selenium_scraper - INFO - Scraped tournament 18: RAMADAN PREMIER LEAGUE
+2026-01-27 10:21:34,438 - scraper.selenium_scraper - INFO - Scraped tournament 19: Steelbird Cricket League T-21 Season 12 - 2026
+2026-01-27 10:21:35,120 - scraper.selenium_scraper - INFO - Scraped tournament 20: SRPL
+2026-01-27 10:21:35,120 - root - INFO - Successfully scraped 20 tournaments
+2026-01-27 10:21:35,121 - root - INFO - Saved scraped data to /home/runner/work/super-player-auction-scraper/super-player-auction-scraper/data/tournament_data_20260127-102135.json
+2026-01-27 10:21:35,121 - root - INFO - Initializing Graph API
+2026-01-27 10:21:35,121 - excel.graph_api - INFO - Extracted file ID: 9e836ed5-f58f-4dc7-a969-3c62b255f3ea
+2026-01-27 10:21:35,121 - excel.graph_api - INFO - Extracted site ID: CorpDevaaf94619130d4a79af9f3aeae502bdb5
+2026-01-27 10:21:35,121 - root - INFO - Authenticating with Microsoft Graph API
+2026-01-27 10:21:35,360 - excel.graph_api - INFO - Authentication successful
+2026-01-27 10:21:35,360 - root - INFO - Updating Excel sheet with scraped data
+2026-01-27 10:21:35,646 - excel.graph_api - INFO - Retrieved drive ID: b!MXUqfmBgAkyqAi_g7J1PO_6yKSWnHbZCs3mpe4EkYuX6d8izcdJxRb78S6OW5SIB
+2026-01-27 10:21:36,698 - excel.graph_api - INFO - Retrieved 1141 rows from Excel
+2026-01-27 10:21:37,643 - excel.graph_api - INFO - Updating range A1143:M1145 with 3 new entries
+2026-01-27 10:21:38,550 - excel.graph_api - INFO - Successfully added 3 new tournaments to Excel
+2026-01-27 10:21:38,551 - root - INFO - Excel sheet updated successfully
+2026-01-27 10:21:38,626 - scraper.selenium_scraper - INFO - Chrome driver closed
+2026-01-27 10:21:38,626 - root - INFO - Selenium driver closed
+2026-01-27 10:21:38,627 - root - INFO - Script execution completed
